@@ -11,3 +11,19 @@ Many to Many Relationship
 - Review Relationships (one to many => has many, belongs to)
 - Expand on relationships to express many to many
   - We'll build out a new relationship from scratch to teach this concept
+
+Actor has many roles
+Actor has_many films, through roles
+
+Film has_many roles
+Film has_many actors, through roles
+
+Film belongs to actor
+Film belongs to role
+
+Actor -< Role >- Film
+Doctor -< Appointment >- Patient
+
+Complicated Scenario:
+User -< Posts
+User -< Likes >- Posts
