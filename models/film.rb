@@ -14,4 +14,20 @@ class Film
     @@all
   end
 
+  def roles
+    # Give me all the roles
+    # that belong to me
+    Role.all.select{|role| role.film == self}
+  end
+
+  def actors
+    # give me an array of my roles
+    # return an array of the actor from each role
+    roles.map{|role| role.actor}
+  end
+
+  def actor_names
+    actors.map{|actor| actor.name}
+  end
+
 end
